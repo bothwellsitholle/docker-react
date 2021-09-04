@@ -8,12 +8,12 @@ before_install:
 script:
   - docker run myimage npm run test -- --coverage
 
-deploy:
-  provider: elasticbeanstalk
-  region: "us-east-2"
-  app: "docker-react"
-  env: "Dockerreact-env"
-  bucket_name: "elasticbeanstalk-us-east-2-414387038831"
-  bucket_path: "docker-react"
-  on:
-    branch: master
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "us-east-2"
+#   app: "docker-react"
+#   env: "Dockerreact-env"
+#   bucket_name: "elasticbeanstalk-us-east-2-414387038831"
+#   bucket_path: "docker-react"
+#   on:
+#     branch: master
