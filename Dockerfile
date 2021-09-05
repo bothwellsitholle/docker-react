@@ -1,4 +1,4 @@
-FROM node:12 as builder
+FROM node:12 AS builder
 WORKDIR '/app'
 COPY package*.json .
 RUN npm install
