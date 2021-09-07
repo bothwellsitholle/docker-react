@@ -5,10 +5,9 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx:1.13.12-alpine as production-stage
-COPY --from=builder /app/build /usr/share/nginx/html
+FROM nginx
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+COPY --from=builder /app/build /usr/share/nginx/html
 
 
 
