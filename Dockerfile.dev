@@ -1,10 +1,6 @@
 FROM node:alpine 
 WORKDIR '/app'
-<<<<<<< HEAD
-COPY package*.json .
-=======
 COPY package.json .
->>>>>>> 4bfd0c0e90905e37c5e05aa2da0ec498a536bb21
 RUN npm install 
 COPY . .
 CMD ["npm", "run", "start"]
