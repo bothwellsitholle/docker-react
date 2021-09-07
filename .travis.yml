@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t bill/myimage -f Dockerfile .
+  - docker build -t bill/myimage -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true bill/myimage npm run test
